@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tabuayya <tabuayya@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 17:47:06 by tabuayya          #+#    #+#             */
-/*   Updated: 2025/02/02 10:33:47 by tabuayya         ###   ########.fr       */
+/*   Updated: 2025/02/03 11:55:30 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include "../ft_lib/includes/libft.h"
 # include <limits.h>
 # include <stdlib.h>
+# include <stdio.h>
+# include <unistd.h>
 typedef struct	s_stack
 {
     int	data;
