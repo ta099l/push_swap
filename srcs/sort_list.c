@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:39:37 by tasnimsamer       #+#    #+#             */
-/*   Updated: 2025/02/06 15:10:09 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/06 15:13:06 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,3 +59,8 @@ void    sort_list(t_stack **a, t_stack **b, int argc)
         else if (argc == 4)
                 sort_three(a);
         else if (argc == 5)
+                sort_four(a, b);
+        else if (argc == 6)
+                sort_five(a, b);
+        else
+                radix_sort(a, b);
