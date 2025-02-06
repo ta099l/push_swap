@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:10:40 by tasnimsamer       #+#    #+#             */
-/*   Updated: 2025/02/04 21:36:13 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/05 12:24:12 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,16 @@ void push_b(t_stack **b, t_stack **a)
 void rotate_b(t_stack **b)
 {
         ft_printf("rb\n");
+        rotate(b);
+}
+void reverse_rotate_b(t_stack **b)
+{
+        ft_printf("rrb\n");
+        reverse_rotate(b);
+}
+void rotate_ab(t_stack **a, t_stack **b)
+{
+        ft_printf("rr\n");
+        rotate(a);
         rotate(b);
 }

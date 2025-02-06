@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 17:47:06 by tabuayya          #+#    #+#             */
-/*   Updated: 2025/02/04 21:33:12 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/05 16:31:00 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,18 @@ void is_sorted(t_stack *node);
 void push(t_stack **a, t_stack **b);
 void swap(t_stack **a);
 void rotate(t_stack **stack);
+void reverse_rotate(t_stack **stack);
 void swap_a(t_stack **a);
 void push_a(t_stack **a, t_stack **b);
 void rotate_a(t_stack **stack);
+void reverse_rotate_a(t_stack **a);
+void swap_b(t_stack **b);
+void push_b(t_stack **b, t_stack **a);
+void rotate_b(t_stack **b);
+void reverse_rotate_b(t_stack **b);
+void swap_ab(t_stack **a, t_stack **b);
+void rotate_ab(t_stack **a, t_stack **b);
+void sort_two(t_stack **stack);
+void sort_three(t_stack **stack);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 11:47:36 by tasnimsamer       #+#    #+#             */
-/*   Updated: 2025/02/04 21:37:36 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/05 12:26:08 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,23 @@ void rotate(t_stack **stack)
         *stack = first->next;
         first->next = NULL;
         temp->next = first;
+}
+void    reverse_rotate(t_stack  **stack)
+{
+        t_stack *tmp;
+        t_stack *n_last;
+
+        n_last = NULL;
+        tmp = *stack;
+        
+        if(!stack)
+                return;
+        while(tmp->next != NULL)
+        {
+                n_last = tmp;
+                tmp = tmp->next;
+        }
+        tmp->next = *stack;
+        n_last->next = NULL;
+        *stack = tmp;
 }
