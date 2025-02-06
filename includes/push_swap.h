@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 17:47:06 by tabuayya          #+#    #+#             */
-/*   Updated: 2025/02/05 16:31:00 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/06 14:14:08 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,15 @@ void swap_ab(t_stack **a, t_stack **b);
 void rotate_ab(t_stack **a, t_stack **b);
 void sort_two(t_stack **stack);
 void sort_three(t_stack **stack);
+
+void sort_five(t_stack **a, t_stack **b);
+void give_index(t_stack *a);
+void switch_values(t_stack *a);
+void do_radix_sort(t_stack **a, t_stack **b);
+int find_max_bits(t_stack *a);
+int stack_size(t_stack *a);
+void radix_sort(t_stack **a, t_stack **b);
+int find_min(t_stack *a);
+void push_min(t_stack **a, t_stack **b);
 
 #endif

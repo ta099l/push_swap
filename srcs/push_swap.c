@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 15:57:20 by tabuayya          #+#    #+#             */
-/*   Updated: 2025/02/05 16:30:46 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/06 14:15:59 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,12 @@ void    print_list(t_stack *node)
 int main(int argc, char **argv)
 {
         t_stack *a;
-        //t_stack *b;
+        t_stack *b;
         int num;
         int i;
 
         i = 1;
-        //b = NULL;
+        b = NULL;
         a = NULL;
         //error_checking(argv[i]);
         if (argc < 2)
@@ -71,8 +71,10 @@ int main(int argc, char **argv)
         }
         //sort_list(a, b, argc);
         //is_sorted(a);
-        sort_three(&a);
+        //sort_three(&a);
         //reverse_rotate_a(&a);
-        print_list(a);
+        //radix_sort(&a, &b);
+        sort_five(&a,&b);
+        // print_list(a);
         //print_list(b);
 }
