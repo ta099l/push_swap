@@ -6,26 +6,27 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 13:54:13 by tasnimsamer       #+#    #+#             */
-/*   Updated: 2025/02/04 19:38:43 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/07 13:51:12 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void is_sorted(t_stack *node)
+int is_sorted(t_stack *node)
 {
         if (!node)
-                return;
+                ft_free_stack(&node);
         while (node->next)
         {
                 if (node->data > node->next->data)
                 {
                         ft_printf("not sorted");
-                        return;
+                        return (1);
                 }
                 node = node->next;
         }
         ft_printf("sorted");
+        return (0);
 }
 int check_elements(char *argv)
 {

@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 15:57:20 by tabuayya          #+#    #+#             */
-/*   Updated: 2025/02/06 16:34:33 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/07 13:42:43 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,26 +55,23 @@ int main(int argc, char **argv)
         i = 1;
         b = NULL;
         a = NULL;
-        //error_checking(argv[i]);
         if (argc < 2)
                 ft_printf("Too few arguments\n");
         
         while (argv[i])
         {
                 check_elements(argv[i]);
-                num = ft_atoi(argv[i]);
+                num = ft_atol(argv[i]);
                 if (check_duplicates(a, num))
                         stack_init(&a, num);
                 else
                         return (0); // function
                 i++;
         }
+        if (is_sorted(a))
+                ft_free_stack(&a); // function
         sort_list(&a, &b, argc);
         //is_sorted(a);
-        //sort_three(&a);
-        //reverse_rotate_a(&a);
-        //radix_sort(&a, &b);
-        //sort_five(&a,&b);
         print_list(a);
         //print_list(b);
 }

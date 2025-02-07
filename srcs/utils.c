@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 14:19:04 by tasnimsamer       #+#    #+#             */
-/*   Updated: 2025/02/07 12:43:50 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/07 13:17:51 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,15 @@ void ft_free_stack(t_stack **stack)
 {
         t_stack *temp;
 
+        if (stack == NULL || *stack == NULL)
+                return;
         while (*stack)
         {
                 temp = (*stack)->next;
                 free(*stack);
                 *stack = temp;
         }
+        *stack = NULL;
 }
 
 void ft_exit(t_stack **a, t_stack **b)
@@ -64,4 +67,33 @@ void switch_values(t_stack *a)
                 a->data = a->index;
                 a = a->next;
         }
+}
+int     ft_atol(char    *nptr)
+{
+        int i;
+        long result;
+        int sign;
+
+        sign = 1;
+        result = 0;
+        i = 0;
+        while (nptr[i] == ' ' || (nptr[i] >= 9 && nptr[i] <= 13))
+                i++;
+        if (nptr[i] == '-' || nptr[i] == '+')
+        {
+                if (nptr[i] == '-')
+                        sign = -1;
+                i++;
+        }
+        while (nptr[i] >= '0' && nptr[i] <= '9')
+        {
+                result = (result * 10) + (nptr[i] - 48);
+                i++;
+        }
+        if (result > INT_MAX || result < INT_MIN)
+        {
+                ft_printf("Error\n");
+                exit(0);
+        }
+        return (result * sign);
 }

@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 17:47:06 by tabuayya          #+#    #+#             */
-/*   Updated: 2025/02/06 16:17:15 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/07 13:52:25 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ t_stack *new_node(int value);
 void stack_init(t_stack **a, int num);
 int check_duplicates(t_stack *a, int num);
 int check_elements(char *argv);
-void is_sorted(t_stack *node);
+int is_sorted(t_stack *node);
 void push(t_stack **a, t_stack **b);
 void swap(t_stack **a);
 void rotate(t_stack **stack);
@@ -60,5 +60,6 @@ void push_min(t_stack **a, t_stack **b);
 void ft_free_stack(t_stack **stack);
 void ft_exit(t_stack **a, t_stack **b);
 void sort_list(t_stack **a, t_stack **b, int argc);
+int ft_atol(char *nptr);
 
 #endif
