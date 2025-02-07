@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:39:37 by tasnimsamer       #+#    #+#             */
-/*   Updated: 2025/02/07 17:35:57 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/07 18:35:47 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void    sort_two(t_stack **stack)
         tmp = *stack;
         if(tmp->data > tmp->next->data)
                 swap_a(stack);
-        // ft_free_stack(stack);
 }
 void    sort_three(t_stack **stack)
 {
@@ -65,5 +64,5 @@ void    sort_list(t_stack **a, t_stack **b, int argc)
                 sort_five(a, b);
         else
                 radix_sort(a, b);
-        ft_free_stack(a);
+        ft_exit(a, b);
 }
