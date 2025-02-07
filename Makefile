@@ -11,7 +11,7 @@ LIB = -L./ft_lib -lft
 
 RM = rm -rf
 
-SRCS = push_swap.c error_handling.c operations.c operations_a.c operations_b.c sort_list.c radix_sort.c utils.c
+SRCS = push_swap.c error_handling.c operations.c operations_a.c operations_b.c sort_list.c radix_sort.c utils.c free.c
 
 SRC  = $(addprefix $(SRCDIR)/, $(SRCS))
 
