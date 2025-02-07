@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 17:47:06 by tabuayya          #+#    #+#             */
-/*   Updated: 2025/02/07 16:59:20 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/07 17:31:00 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,6 @@ void push_min(t_stack **a, t_stack **b);
 void ft_free_stack(t_stack **stack);
 void ft_exit(t_stack **a, t_stack **b);
 void sort_list(t_stack **a, t_stack **b, int argc);
-int ft_atol(char *nptr);
+int ft_atoi_n(char *nptr);
 
 #endif

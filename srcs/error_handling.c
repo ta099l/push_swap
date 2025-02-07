@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 13:54:13 by tasnimsamer       #+#    #+#             */
-/*   Updated: 2025/02/07 17:24:07 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/07 17:42:25 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ int is_sorted(t_stack *node)
         {
                 if (node->data > node->next->data)
                 {
-                        ft_printf("not sorted");
+                        ft_printf("not sorted\n");
                         return (0);
                 }
                 node = node->next;
         }
-        ft_printf("sorted");
+        ft_printf("sorted\n");
         return (1);
 }
 int check_elements(char *argv)

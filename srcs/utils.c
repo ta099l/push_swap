@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 14:19:04 by tasnimsamer       #+#    #+#             */
-/*   Updated: 2025/02/07 16:45:32 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/07 17:37:05 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,10 @@ void switch_values(t_stack *a)
                 a = a->next;
         }
 }
-int     ft_atol(char    *nptr)
+int     ft_atoi_n(char    *nptr)
 {
         int i;
-        long result;
+        int result;
         int sign;
 
         sign = 1;

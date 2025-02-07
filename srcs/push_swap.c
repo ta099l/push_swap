@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 15:57:20 by tabuayya          #+#    #+#             */
-/*   Updated: 2025/02/07 17:01:10 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/07 17:41:59 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,18 +63,17 @@ int main(int argc, char **argv)
         while (argv[i])
         {
                 check_elements(argv[i]);
-                num = ft_atol(argv[i]);
+                num = ft_atoi_n(argv[i]);
                 if (check_duplicates(a, num))
-                        stack_init(&a, num);
-                else
                 {
-                        ft_free_stack(&a);
-                        return (0);
+                        stack_init(&a, num);
                 }
+                else
+                        ft_exit(&a, &b);
                 i++;
         }
-        if (!is_sorted(a))
-                ft_free_stack(&a);
+        if (is_sorted(a))
+                ft_exit(&a, &b);
         sort_list(&a, &b, argc);
         print_list(a);
         ft_exit(&a, &b);
