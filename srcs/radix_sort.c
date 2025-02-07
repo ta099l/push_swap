@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 13:17:29 by tasnimsamer       #+#    #+#             */
-/*   Updated: 2025/02/06 13:36:00 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/07 12:43:45 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,15 +76,6 @@ void	give_index(t_stack *a)
 		}
 		temp2->index = index;
 		temp2 = temp2->next;
-	}
-}
-
-void	switch_values(t_stack *a)
-{
-	while (a)
-	{
-		a->data = a->index;
-		a = a->next;
 	}
 }
 

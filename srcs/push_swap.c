@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 15:57:20 by tabuayya          #+#    #+#             */
-/*   Updated: 2025/02/06 14:15:59 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/06 16:34:33 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,12 +69,12 @@ int main(int argc, char **argv)
                         return (0); // function
                 i++;
         }
-        //sort_list(a, b, argc);
+        sort_list(&a, &b, argc);
         //is_sorted(a);
         //sort_three(&a);
         //reverse_rotate_a(&a);
         //radix_sort(&a, &b);
-        sort_five(&a,&b);
-        // print_list(a);
+        //sort_five(&a,&b);
+        print_list(a);
         //print_list(b);
 }
