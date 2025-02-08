@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 15:57:20 by tabuayya          #+#    #+#             */
-/*   Updated: 2025/02/07 17:41:59 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/08 23:46:50 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ int main(int argc, char **argv)
         if (is_sorted(a))
                 ft_exit(&a, &b);
         sort_list(&a, &b, argc);
-        print_list(a);
-        ft_exit(&a, &b);
+        // print_list(a);
+        // ft_exit(&a, &b);
         return 0;
 }
