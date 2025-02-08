@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 13:54:13 by tasnimsamer       #+#    #+#             */
-/*   Updated: 2025/02/07 18:36:24 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/09 00:11:08 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,21 +32,20 @@ int check_elements(char *argv)
         {
                 if ((*argv > '9' || *argv < '0'))
                 {
-                        ft_printf("Invalid Argument\n");
-                        return (0); // function
+                        write(2, "Error\n", 6);
+                        exit (0); // function
                 }
                 argv++;
         }
         return (1);
 }
-int check_duplicates(t_stack *a, int num)
+int check_duplicates(t_stack *a, t_stack **b, int num)
 {
         while (a)
         {
                 if (a->data == num)
                 {
-                        ft_printf("Duplicate Error\n");
-                        return (0); // function
+                        error_free(a, b); // function
                 }
                 a = a->next;
         }

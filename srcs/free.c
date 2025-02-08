@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 15:57:55 by tasnimsamer       #+#    #+#             */
-/*   Updated: 2025/02/07 17:18:00 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/09 00:10:34 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,12 @@ void ft_exit(t_stack **a, t_stack **b)
         ft_free_stack(a);
         ft_free_stack(b);
         exit(0);
+}
+
+void error_free(t_stack **a, t_stack **b)
+{
+        ft_free_stack(a);
+        ft_free_stack(b);
+        write(2, "Error\n", 6);
+        exit(1);
 }
