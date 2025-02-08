@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 13:54:13 by tasnimsamer       #+#    #+#             */
-/*   Updated: 2025/02/09 00:11:08 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/09 00:14:57 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,14 @@ int check_elements(char *argv)
         }
         return (1);
 }
-int check_duplicates(t_stack *a, t_stack **b, int num)
+int check_duplicates(t_stack *a, int num)
 {
         while (a)
         {
                 if (a->data == num)
                 {
-                        error_free(a, b); // function
+                        write(2, "Error\n", 6);
+                        exit(1);
                 }
                 a = a->next;
         }

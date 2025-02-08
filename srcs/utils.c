@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 14:19:04 by tasnimsamer       #+#    #+#             */
-/*   Updated: 2025/02/07 17:37:05 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/09 00:14:44 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,8 @@ int     ft_atoi_n(char    *nptr)
         }
         if (result > INT_MAX || result < INT_MIN)
         {
-                ft_printf("Error\n");
-                exit(0);
+                write(2, "Error\n", 6);
+                exit(1);
         }
         return (result * sign);
 }
