@@ -6,18 +6,18 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:39:37 by tasnimsamer       #+#    #+#             */
-/*   Updated: 2025/02/08 23:46:06 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/09 00:16:14 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    sort_two(t_stack **stack)
+void sort_two(t_stack **stack)
 {
         t_stack *tmp;
 
         tmp = *stack;
-        if(tmp->data > tmp->next->data)
+        if (tmp->data > tmp->next->data)
                 swap_a(stack);
 }
 void sort_three(t_stack **stack)
@@ -45,18 +45,17 @@ void sort_four(t_stack **a, t_stack **b)
         push_a(a, b);
 }
 
-void    sort_five(t_stack **a, t_stack **b)
+void sort_five(t_stack **a, t_stack **b)
 {
         push_min(a, b);
         sort_four(a, b);
         push_a(a, b);
 }
 
-
-void    sort_list(t_stack **a, t_stack **b, int argc)
+void sort_list(t_stack **a, t_stack **b, int argc)
 {
         if (argc == 3)
-               sort_two(a);
+                sort_two(a);
         else if (argc == 4)
                 sort_three(a);
         else if (argc == 5)
