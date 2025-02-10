@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 13:54:13 by tasnimsamer       #+#    #+#             */
-/*   Updated: 2025/02/09 00:14:57 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/11 02:55:40 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int is_sorted(t_stack *node)
         }
         return (1);
 }
-int check_elements(char *argv)
+int check_elements(char *argv, t_stack **a, t_stack **b)
 {
         if (*argv == '-' || *argv == '+')
                 argv++;
@@ -32,8 +32,8 @@ int check_elements(char *argv)
         {
                 if ((*argv > '9' || *argv < '0'))
                 {
-                        write(2, "Error\n", 6);
-                        exit (0); // function
+                        error_free(a, b);
+                        return (0);
                 }
                 argv++;
         }

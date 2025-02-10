@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 15:57:55 by tasnimsamer       #+#    #+#             */
-/*   Updated: 2025/02/09 00:10:34 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/11 02:22:28 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,14 @@ void ft_free_stack(t_stack **stack)
                 *stack = temp;
         }
         *stack = NULL;
+        ft_printf("stack freed\n");
 }
 
-void ft_exit(t_stack **a, t_stack **b)
+void ft_exit(t_stack **a, t_stack **b, int num)
 {
         ft_free_stack(a);
         ft_free_stack(b);
-        exit(0);
+        exit(num);
 }
 
 void error_free(t_stack **a, t_stack **b)

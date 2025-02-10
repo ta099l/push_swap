@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 14:19:04 by tasnimsamer       #+#    #+#             */
-/*   Updated: 2025/02/10 23:02:04 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/11 02:58:25 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,13 @@ void switch_values(t_stack *a)
                 a->data = a->index;
                 a = a->next;
         }
+
 }
-int     ft_atoi_n(char    *nptr)
+// void    ft_atol_2(int   result)
+// {
+        
+// }
+int ft_atol(char *nptr, t_stack **a, t_stack **b)
 {
         int i;
         long result;
@@ -69,9 +74,6 @@ int     ft_atoi_n(char    *nptr)
                 i++;
         }
         if (result > INT_MAX || result < INT_MIN)
-        {
-                write(2, "Error\n", 6);
-                exit(1);
-        }
+                error_free(a, b);
         return (result * sign);
 }

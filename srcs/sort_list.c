@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:39:37 by tasnimsamer       #+#    #+#             */
-/*   Updated: 2025/02/10 22:58:05 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/11 02:23:33 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,5 @@ void sort_list(t_stack **a, t_stack **b, int argc)
                 sort_five(a, b);
         else
                 radix_sort(a, b);
-        //ft_exit(a, b);
+        ft_exit(a, b, 0);
 }

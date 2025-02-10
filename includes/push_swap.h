@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 17:47:06 by tabuayya          #+#    #+#             */
-/*   Updated: 2025/02/07 17:31:00 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/11 02:51:50 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int main(int argc, char **argv);
 t_stack *new_node(int value);
 void stack_init(t_stack **a, int num);
 int check_duplicates(t_stack *a, int num);
-int check_elements(char *argv);
+int check_elements(char *argv, t_stack **a, t_stack **b);
 int is_sorted(t_stack *node);
 void push(t_stack **a, t_stack **b);
 void swap(t_stack **a);
@@ -58,8 +58,8 @@ void radix_sort(t_stack **a, t_stack **b);
 int find_min(t_stack *a);
 void push_min(t_stack **a, t_stack **b);
 void ft_free_stack(t_stack **stack);
-void ft_exit(t_stack **a, t_stack **b);
+void ft_exit(t_stack **a, t_stack **b, int num);
 void sort_list(t_stack **a, t_stack **b, int argc);
-int ft_atoi_n(char *nptr);
-
+int ft_atol(char *nptr, t_stack **a, t_stack **b);
+void error_free(t_stack **a, t_stack **b);
 #endif
