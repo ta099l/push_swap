@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/06 14:19:04 by tasnimsamer       #+#    #+#             */
-/*   Updated: 2025/02/09 00:14:44 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/10 23:02:04 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void switch_values(t_stack *a)
 int     ft_atoi_n(char    *nptr)
 {
         int i;
-        int result;
+        long result;
         int sign;
 
         sign = 1;

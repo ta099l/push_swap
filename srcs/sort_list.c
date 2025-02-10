@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 21:39:37 by tasnimsamer       #+#    #+#             */
-/*   Updated: 2025/02/09 00:16:14 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/10 22:58:05 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,22 @@ void sort_two(t_stack **stack)
         if (tmp->data > tmp->next->data)
                 swap_a(stack);
 }
+
 void sort_three(t_stack **stack)
 {
-        t_stack *first;
-        t_stack *second;
-        t_stack *third;
-
-        first = *stack;
-        second = first->next;
-        third = second->next;
+        t_stack *first = *stack;
+        t_stack *second = first->next;
+        t_stack *third = second->next;
 
         if (first->data > second->data && first->data > third->data)
                 rotate_a(stack);
-        if (second->data > third->data)
+        else if (second->data > first->data && second->data > third->data)
                 reverse_rotate_a(stack);
-        if ((*stack)->data > (*stack)->next->data)
+
+        first = *stack;
+        second = first->next;
+
+        if (first->data > second->data)
                 swap_a(stack);
 }
 
@@ -64,5 +65,5 @@ void sort_list(t_stack **a, t_stack **b, int argc)
                 sort_five(a, b);
         else
                 radix_sort(a, b);
-        ft_exit(a, b);
+        //ft_exit(a, b);
 }
