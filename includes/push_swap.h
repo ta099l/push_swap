@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 17:47:06 by tabuayya          #+#    #+#             */
-/*   Updated: 2025/02/11 02:51:50 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/11 03:06:45 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int main(int argc, char **argv);
 t_stack *new_node(int value);
 void stack_init(t_stack **a, int num);
 int check_duplicates(t_stack *a, int num);
-int check_elements(char *argv, t_stack **a, t_stack **b);
+int check_elements(char *argv, t_stack **a);
 int is_sorted(t_stack *node);
 void push(t_stack **a, t_stack **b);
 void swap(t_stack **a);
