@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 13:54:13 by tasnimsamer       #+#    #+#             */
-/*   Updated: 2025/02/11 03:04:48 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/11 13:44:01 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 int is_sorted(t_stack *node)
 {
         if (!node)
+        {
                 ft_free_stack(&node);
+                exit(1);
+        }
         while (node->next)
         {
                 if (node->data > node->next->data)
@@ -41,13 +44,16 @@ int check_elements(char *argv, t_stack **a)
 }
 int check_duplicates(t_stack *a, int num)
 {
-        while (a)
+        t_stack *temp;
+        
+        temp = a;
+        while (temp)
         {
-                if (a->data == num)
+                if (temp->data == num)
                 {
                         error_free(&a, NULL);
                 }
-                a = a->next;
+                temp = temp->next;
         }
         return (1);
 }

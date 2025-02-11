@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/01 15:57:20 by tabuayya          #+#    #+#             */
-/*   Updated: 2025/02/11 03:05:25 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/11 12:37:48 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ void stack_init(t_stack **a, int num)
 
         tmp = *a;
         node = new_node(num);
+        if (!node)
+                error_free(a, NULL);
         if (!*a)
                 *a = node;
         else
@@ -66,12 +68,14 @@ int main(int argc, char **argv)
                 num = ft_atol(argv[i], &a, &b);
                 if (check_duplicates(a, num))
                         stack_init(&a, num);
+                else
+                        error_free(&a, &b);
                 i++;
         }
         if (is_sorted(a))
                 ft_exit(&a, &b, 0);
         sort_list(&a, &b, argc);
-        print_list(a);
-        ft_exit(&a, &b, 0);
+        //print_list(a);
+        //ft_exit(&a, &b, 0);
         return 0;
 }

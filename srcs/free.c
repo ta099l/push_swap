@@ -6,7 +6,7 @@
 /*   By: tasnimsamer <tasnimsamer@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 15:57:55 by tasnimsamer       #+#    #+#             */
-/*   Updated: 2025/02/11 02:22:28 by tasnimsamer      ###   ########.fr       */
+/*   Updated: 2025/02/11 13:29:03 by tasnimsamer      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,38 @@ void ft_free_stack(t_stack **stack)
 
         if (stack == NULL || *stack == NULL)
                 return;
-        while (*stack)
+        while (1)
         {
-                temp = (*stack)->next;
-                free(*stack);
-                *stack = temp;
+                ft_printf("hi\n");
+                temp = *stack;
+                *stack = (*stack)->next;
+                free(temp);
+                if (!*stack)
+                        break;
         }
-        *stack = NULL;
-        ft_printf("stack freed\n");
 }
+
+// temp2 = *stack;
+// while (temp2)
+// {
+//         temp = temp2;
+//         temp2 = temp->next;
+//         free(temp);
+// }
+// ft_printf("stack freed\n");
+
+// {
+//         t_stack *temp;
+
+//         if (stack == NULL || *stack == NULL)
+//                 return;
+//         temp = *stack;
+//         while (temp)
+//         {
+//                 ft_printf("stack freed\n");
+//                 free(temp);
+//         }
+// }
 
 void ft_exit(t_stack **a, t_stack **b, int num)
 {
